@@ -1,0 +1,29 @@
+{
+  "name": "learning-functional",
+  "version": "1.0.0",
+  "description": "Functional lib and examples in ES8",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --experimental-modules functional-playground/play.mjs",
+    "build": "babel lib --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynzy/functional-es8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ynzy/functional-es8/issues"
+  },
+  "homepage": "https://github.com/ynzy/functional-es8#readme",
+  "dependencies": {
+    "babel-node": "^0.0.1-security",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/preset-env": "^7.24.0"
+  }
+}
