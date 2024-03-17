@@ -3,6 +3,7 @@ import {
   forEach,
   forEachObject,
   memoized,
+  objectAssign,
   once,
   some,
   sortBy,
@@ -128,3 +129,9 @@ console.log("Fast Factorial of 3 is", fastFactorial(3));
 console.time("Fast Factorial");
 console.log("Fast Factorial of 7 is", fastFactorial(7));
 console.timeEnd("Fast Factorial");
+
+var a = {name: '123'}
+var b = {age: 30}
+var c = {sex: 'M'}
+var customObjectAssign = objectAssign(a,b,c)
+console.log(customObjectAssign);
