@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const curry =(fn) => {
+      if(typeof fn!=='function'){
+          throw Error('No function provided');
+      }
+
+      return function curriedFn(...args){
+        
+        //make it bold
+        if(args.length < fn.length){
+          return function(...newArgs){
+            const res = args.concat(newArgs)
+            return curriedFn.apply(null, res);
+          };
+        }
+        //make it bold
+
+        return fn.apply(null, args);
+      };
+    };
+
+    const multiply = (x,y,z) => x * y * z
+
+    const currieMul3 = curry(multiply)(3)
+    const currieMul2 = currieMul3(2)
+    const currieMul1 = currieMul2(1)
+    console.log(currieMul1);
+  </script>
+</body>
+</html>
